@@ -6,7 +6,7 @@ import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 
 import Home from './pages/Home'
-// import Profil from './pages/Profil'
+import Profil from './pages/Profil'
 // import Settings from './pages/Settings'
 // import Community from './pages/Community'
 
@@ -19,9 +19,7 @@ root.render(
         <Sidebar />
         <Routes>
           <Route path='/' element={<Home />} />
-          {/* <Route path='/profil/:userId' element={<Profil />} />
-        <Route path='/settings' element={<Settings />} />
-        <Route path='/community' element={<Community />} /> */}
+          <Route path='/profil/:userId' element={<Profil />} />
         </Routes>
       </main>
     </Router>

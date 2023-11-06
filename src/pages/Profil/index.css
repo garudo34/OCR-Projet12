@@ -1,0 +1,7 @@
+.profil-key-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 39px;
+}

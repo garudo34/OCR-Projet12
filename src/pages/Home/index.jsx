@@ -1,10 +1,22 @@
+import { Link } from 'react-router-dom'
+import './index.css'
+
 function Home() {
   return (
-    <div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, voluptas
-      suscipit consectetur iure quo ab aperiam ea praesentium. Ullam voluptatum
-      corporis architecto sed? Ipsam, illo ipsa eveniet explicabo ut quibusdam!
-    </div>
+    <main className='home-main'>
+      <div className='form-profil-selection'>
+        <h1>Sélectionnez un profil</h1>
+        <div className='btn-group'>
+          <Link className='btn' to='/profil/12'>
+            Karl
+          </Link>
+
+          <Link className='btn' to='/profil/18'>
+            Cécilia
+          </Link>
+        </div>
+      </div>
+    </main>
   )
 }
 
