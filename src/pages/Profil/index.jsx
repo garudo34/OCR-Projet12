@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import KeyDataCard from '../../components/KeyDataCard'
+import Activity from '../../components/Activity'
+import Session from '../../components/Session'
+import Performance from '../../components/Performance'
+import Goal from '../../components/Goal'
 import caloriesIcon from '../../assets/calories-icon.svg'
 import carbsIcon from '../../assets/carbs-icon.svg'
 import fatIcon from '../../assets/fat-icon.svg'
@@ -27,7 +31,7 @@ function Profil() {
         let actualData = await response.json()
         setData(actualData)
         setError(null)
-        console.log(data)
+        console.log('get user data', data)
       } catch (err) {
         setError(err.message)
         setData(null)
@@ -46,7 +50,7 @@ function Profil() {
       )}
 
       {data && (
-        <>
+        <div className='profil-container'>
           <div className='profil-header'>
             <h1 className='profil-header-hello'>
               Bonjour{' '}
@@ -57,6 +61,24 @@ function Profil() {
             </h2>
           </div>
           <div className='profil-content'>
+            <div className='profil-content-charts'>
+              <div className='profil-content-primary'>
+                <div className='profil-content-activity'>
+                  <Activity />
+                </div>
+              </div>
+              <div className='profil-content-secondary'>
+                <div className='profil-content-session'>
+                  <Session />
+                </div>
+                <div className='profil-content-performance'>
+                  <Performance />
+                </div>
+                <div className='profil-content-goal'>
+                  <Goal />
+                </div>
+              </div>
+            </div>
             <div className='profil-key-data'>
               <KeyDataCard
                 iconUrl={caloriesIcon}
@@ -84,7 +106,7 @@ function Profil() {
               />
             </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   )
