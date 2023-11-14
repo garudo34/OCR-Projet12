@@ -1,24 +1,9 @@
+.profil-main {
+  flex: 1 0 auto;
+}
+
 .profil-container {
   margin: 68px 90px 86px 107px;
-}
-
-.profil-header {
-  color: #000000;
-  font-style: normal;
-  line-height: 24px;
-  font-weight: 500;
-}
-.profil-header-hello {
-  font-size: 48px;
-}
-
-.profil-header-hello .text-red {
-  color: #ff0101;
-}
-
-.profil-header-congrats {
-  font-size: 18px;
-  font-weight: 400;
 }
 
 .profil-content {

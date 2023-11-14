@@ -1,23 +1,34 @@
 import { useEffect, useState } from 'react'
 
-export function useFetch(urlApi) {
+export function useFetch(urlApi, userId) {
   const [data, setData] = useState({})
   const [isLoading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    if (!urlApi) return
+    if (!userId) return
+
     setLoading(true)
     async function fetchData() {
       try {
-        const response = await fetch(urlApi)
+        const response = await fetch(`/dataMocked/${urlApi}`, {
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+        })
         if (!response.ok) {
           throw new Error(
             `This is an HTTP error: The status is ${response.status}`
           )
         }
-        const { data } = await response.json()
-        setData(data)
+        const dataMocked = await response.json()
+        setData(
+          dataMocked.find(
+            (item) =>
+              item.id === parseInt(userId) || item.userId === parseInt(userId)
+          )
+        )
       } catch (err) {
         console.log(err)
         setError(true)
@@ -25,8 +36,9 @@ export function useFetch(urlApi) {
         setLoading(false)
       }
     }
-    fetchData()
-  }, [urlApi])
 
-  return { isLoading, data, error }
+    fetchData()
+  }, [urlApi, userId])
+
+  return { data, isLoading, error }
 }

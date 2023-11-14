@@ -1,8 +1,31 @@
 .text-grey {
   color: #74798c;
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px;
+}
+
+.activity-custom-tooltip {
+  width: 39px;
+  height: 63px;
+  flex-shrink: 0;
+}
+
+.activity-custom-tooltip li {
+  color: #fff;
+
+  text-align: center;
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.activity-custom-tooltip-kilogram {
+  background: #282d30;
+}
+
+.activity-custom-tooltip-calories {
+  background-color: #e60000;
 }

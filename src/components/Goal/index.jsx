@@ -1,8 +1,8 @@
 import './style.css'
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts'
 
-function Goal() {
-  const data = [{ name: 'score', value: 0.3 }]
+function Goal({ score }) {
+  const data = [{ name: 'score', value: score }]
 
   return (
     <ResponsiveContainer>
@@ -40,11 +40,9 @@ function Goal() {
             fill: '#282D30',
           }}
           width={200}
-          scaleToFit={true}
           textAnchor='middle'
-          verticalAnchor='middle'
         >
-          {data[0].value && data[0].value * 100}%
+          {score && score * 100}%
         </text>
         <text
           x='50%'
@@ -56,9 +54,7 @@ function Goal() {
             fill: '#74798C',
           }}
           width={200}
-          scaleToFit={true}
           textAnchor='middle'
-          verticalAnchor='middle'
         >
           de votre
         </text>
@@ -72,9 +68,7 @@ function Goal() {
             fill: '#74798C',
           }}
           width={200}
-          scaleToFit={true}
           textAnchor='middle'
-          verticalAnchor='middle'
         >
           objectif
         </text>
