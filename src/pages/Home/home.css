@@ -34,7 +34,6 @@
   font-weight: 500;
   border-radius: 4px;
   font-size: 14px;
-  line-height: 22px;
   letter-spacing: 0.5px;
   outline: none;
   color: #ffeba7;
@@ -52,4 +51,11 @@
 
 .btn-group .btn:not(:last-child) {
   margin-bottom: 15px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 992px) {
+  .home-main {
+    height: calc(100vh - 90px);
+  }
 }

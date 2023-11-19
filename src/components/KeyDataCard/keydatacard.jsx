@@ -1,4 +1,4 @@
-import './style.css'
+import './keydatacard.css'
 
 function KeyDataCard({ iconUrl, text, smalltext, unit }) {
   const formatNumber = (num) =>

@@ -2,7 +2,6 @@ import { useFetch as useFetchApi } from '../../services/api'
 import { useFetch as useFetchDataMocked } from '../../services/mockedApi'
 
 import PerformanceModel from '../../Models/Performance'
-import './style.css'
 
 import {
   Radar,
@@ -12,8 +11,8 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
 } from 'recharts'
-import Loader from '../Loader'
-import ErrorMessage from '../ErrorMessage'
+import Loader from '../Loader/loader'
+import ErrorMessage from '../ErrorMessage/errormessage'
 
 function Performance({ userId }) {
   const { isLoading, data, error } = useFetchApi(

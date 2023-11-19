@@ -3,7 +3,6 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px;
 }
 
 .activity-custom-tooltip {
@@ -14,7 +13,6 @@
 
 .activity-custom-tooltip li {
   color: #fff;
-
   text-align: center;
   font-size: 7px;
   font-style: normal;

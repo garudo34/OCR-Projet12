@@ -3,23 +3,23 @@ import { useFetch as useFetchDataMocked } from '../../services/mockedApi'
 
 import { useParams } from 'react-router-dom'
 
-import Loader from '../../components/Loader'
-import KeyDataCard from '../../components/KeyDataCard'
-import Activity from '../../components/Activity'
-import Session from '../../components/Session'
-import Performance from '../../components/Performance'
-import Goal from '../../components/Goal'
+import Loader from '../../components/Loader/loader'
+import KeyDataCard from '../../components/KeyDataCard/keydatacard'
+import Activity from '../../components/Activity/activity'
+import Session from '../../components/Session/session'
+import Performance from '../../components/Performance/performance'
+import Goal from '../../components/Goal/goal'
 
 import caloriesIcon from '../../assets/calories-icon.svg'
 import carbsIcon from '../../assets/carbs-icon.svg'
 import fatIcon from '../../assets/fat-icon.svg'
 import proteinIcon from '../../assets/protein-icon.svg'
 
-import './styles.css'
+import './profil.css'
 
 import UserModel from '../../Models/User'
-import Welcome from '../../components/Welcome'
-import ErrorMessage from '../../components/ErrorMessage'
+import Welcome from '../../components/Welcome/welcome'
+import ErrorMessage from '../../components/ErrorMessage/errormessage'
 
 function Profil() {
   document.title = 'SportSee - Dashboard'
@@ -45,21 +45,17 @@ function Profil() {
           {userInfos && <Welcome username={userInfos.firstName} />}
           <div className='profil-content'>
             <div className='profil-content-charts'>
-              <div className='profil-content-primary'>
-                <div className='profil-content-activity'>
-                  <Activity userId={userId} />
-                </div>
+              <div className='profil-content-activity'>
+                <Activity userId={userId} />
               </div>
-              <div className='profil-content-secondary'>
-                <div className='profil-content-session'>
-                  <Session userId={userId} />
-                </div>
-                <div className='profil-content-performance'>
-                  <Performance userId={userId} />
-                </div>
-                <div className='profil-content-goal'>
-                  {score && <Goal score={score} />}
-                </div>
+              <div className='profil-content-session'>
+                <Session userId={userId} />
+              </div>
+              <div className='profil-content-performance'>
+                <Performance userId={userId} />
+              </div>
+              <div className='profil-content-goal'>
+                {score && <Goal score={score} />}
               </div>
             </div>
             {keyData && (

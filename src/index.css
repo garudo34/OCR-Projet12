@@ -3,9 +3,13 @@
 
 * {
   box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+  outline: none;
 }
 
 body {
+  overscroll-behavior: none;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +26,7 @@ code {
 }
 
 .content-wrapper {
+  padding: 90px 0 0;
   display: flex;
 }
 

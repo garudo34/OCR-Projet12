@@ -1,0 +1,161 @@
+.profil-main {
+  /* flex: 1 0 auto; */
+}
+
+.profil-container {
+  margin: 68px 90px 86px 107px;
+}
+
+.profil-content {
+  margin-top: 77px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.profil-content-charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 75%;
+  gap: 30px;
+}
+
+.profil-content-activity {
+  width: 100%;
+  height: 320px;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+}
+
+.profil-content-session {
+  width: 30%;
+  height: 263px;
+  border-radius: 5px;
+  background-color: #f00000;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+}
+.profil-content-performance {
+  width: 30%;
+  height: 263px;
+  border-radius: 5px;
+  background-color: #282d30;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+}
+
+.profil-content-goal {
+  width: 30%;
+  height: 263px;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+}
+
+.profil-key-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 39px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 767px) {
+  .profil-container {
+    margin: 38px 30px 16px 30px;
+  }
+
+  .profil-content {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .profil-content-charts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .profil-content-session,
+  .profil-content-performance,
+  .profil-content-goal {
+    width: 100%;
+  }
+
+  .profil-key-data {
+    gap: 30px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .profil-container {
+    margin: 40px 30px 20px 30px;
+  }
+
+  .profil-content {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .profil-content-charts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .profil-content-session,
+  .profil-content-performance,
+  .profil-content-goal {
+    width: 100%;
+  }
+
+  .profil-key-data {
+    gap: 30px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .profil-container {
+    margin: 40px 30px 20px 30px;
+  }
+
+  .profil-content {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: unset;
+    gap: 15px;
+  }
+
+  .profil-content-charts {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    gap: 15px;
+  }
+
+  .profil-content-session,
+  .profil-content-performance,
+  .profil-content-goal {
+    width: 30%;
+  }
+
+  .profil-key-data {
+    gap: 30px;
+    width: 20%;
+  }
+}

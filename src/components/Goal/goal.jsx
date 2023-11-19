@@ -1,4 +1,3 @@
-import './style.css'
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts'
 
 function Goal({ score }) {

@@ -1,9 +1,9 @@
 import { useFetch as useFetchApi } from '../../services/api'
 import { useFetch as useFetchDataMocked } from '../../services/mockedApi'
-import Loader from '../Loader'
-import ErrorMessage from '../ErrorMessage'
+import Loader from '../Loader/loader'
+import ErrorMessage from '../ErrorMessage/errormessage'
 import ActivityModel from '../../Models/Activity'
-import './style.css'
+import './activity.css'
 
 import {
   BarChart,
@@ -35,7 +35,7 @@ function Activity({ userId }) {
       {isLoading && <Loader />}
       {error && <ErrorMessage />}
       {!isLoading && !error && (
-        <ResponsiveContainer height='90%'>
+        <ResponsiveContainer>
           <BarChart
             data={activity}
             barSize={7}

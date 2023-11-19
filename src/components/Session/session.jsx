@@ -3,9 +3,9 @@ import { useFetch as useFetchDataMocked } from '../../services/mockedApi'
 
 import SessionModel from '../../Models/Session'
 
-import Loader from '../Loader'
+import Loader from '../Loader/loader'
 
-import './style.css'
+import './session.css'
 
 import {
   LineChart,

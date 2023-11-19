@@ -1,4 +1,4 @@
-import './styles.css'
+import './welcome.css'
 
 function Welcome({ username }) {
   return (
